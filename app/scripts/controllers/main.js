@@ -171,7 +171,7 @@ angular.module('guitarTunerAppApp')
       while(length < 2000)
       {
         zeroArray.push(0);
-        console.log('zeros! ');
+        //console.log('zeros! ');
         length++;
       }
       vec2.concat(zeroArray);
@@ -186,10 +186,10 @@ angular.module('guitarTunerAppApp')
       }
 
 
-      var peaks = [];
+      
       var peakMax = 0;
       var peakMaxInd = 0;
-      var size = inputVector.length * 2;
+      
 
       for(var i=7;i<numFreq;i++)
       {
@@ -232,6 +232,7 @@ angular.module('guitarTunerAppApp')
   function getNoteInfo(frequency)
   {
       var note = (Math.round(57+log2( frequency/440.0 )*12 ))%12;
+      console.log(note);
       var noteFull = Math.round(log2( frequency/440.0 )*12);
       var noteFreq = Math.pow(2,noteFull/12.0)*440.0;
       var errorMin = frequency - noteFreq;
