@@ -518,3 +518,54 @@ body, p, div{
   background-color:red;
   margin-top:5px;
 }
+
+#spectrumWrapper{
+  /*border: 2px solid black;*/
+  height: 300px;
+  width: 700px;
+  position: relative;
+  text-align: middle;
+}
+#stapleWrapper{
+
+  position: relative;
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+  width:  14px;
+  height: 200px;
+}
+
+#sp_1, #sp_2, #sp_3
+,#sp_4, #sp_5, #sp_6 ,
+#sp_7, #sp_8, #sp_9 ,
+#sp_10, #sp_11, #sp_12 ,
+#sp_13, #sp_14, #sp_15 ,
+#sp_16, #sp_17, #sp_18 ,
+#sp_19, #sp_20,
+#sp_21,
+#sp_22,
+#sp_23,
+#sp_24,
+#sp_25,
+#sp_26,
+#sp_27,
+#sp_28,
+#sp_29,
+#sp_30,
+#sp_31,
+#sp_32,
+#sp_33,
+#sp_34,
+#sp_35,
+#sp_36,
+#sp_37,
+#sp_38,
+#sp_39,
+#sp_40{
+  width: 14px;
+  border: 1px solid black;
+  bottom: 0;
+  position: absolute;
+  background: green;
+}
