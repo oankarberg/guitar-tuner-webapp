@@ -1,0 +1,516 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+/* Empty. Add your own CSS if you like */
+
+body, p, div{
+  color: black !important;
+}
+
+
+#title {
+  width: 300px;
+  text-align: right;
+  float: right;
+}
+#control {
+  width: 400px;
+
+}
+#message {
+  font-family: Verdana;
+  text-align: left;
+  position: absolute;
+  top:500px;
+}
+#playPauseContainer {
+  float: left;
+  width: 70px;
+}
+
+.pause {
+  margin-left: 5px;
+  width: 20px;
+  height: 50px;
+  border-left: 10px solid #FFFFFF;
+  border-right: 10px solid #FFFFFF;
+  line-height: 50px;
+}
+
+.play {
+  width: 0px;
+  height: 0px;
+  border-left: 50px solid black;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  font-size: 0;
+  line-height: 0;
+}
+
+#playPause{
+  z-index: 10;
+  position: fixed;
+  left: 0;
+  top: 400px;
+
+}
+#tunerViewContainer {
+  position: relative;
+  width:100%;
+  background: white;
+  text-align: center;
+}
+
+#tunerView {
+  margin: 0 auto;
+  position: relative;
+  height: 500px;
+  width: 400px;
+}
+
+.tipNormal {
+  margin: 0 auto;
+  width: 4px;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 50px solid black;
+  font-size: 0;
+  line-height: 0;
+}
+
+.tipHighlighted {
+  margin: 0 auto;
+  width: 4px;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 50px solid red;
+}
+
+.tick_0_normal {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 60px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(0);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(0);
+  background: black;
+}
+
+.tick_0_highlighted {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 60px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(0);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(0);
+  background: red;
+}
+
+#tick_0 {
+  top: 45px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 60px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(0);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(0);
+}
+
+#tick_1 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(4.5deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(4.5deg);
+  background: black;
+}
+#tick_-1 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(-4.5deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(-4.5deg);
+  background: black;
+}
+#tick_2 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(9deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(9deg);
+  background: black;
+}
+#tick_-2 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(-9deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(-9deg);
+  background: black;
+}
+#tick_3 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(13.5deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(13.5deg);
+  background: black;
+}
+#tick_-3 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(-13.5deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(-13.5deg);
+  background: black;
+}
+#tick_4 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(18deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(18deg);
+  background: black;
+}
+#tick_-4 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(-18deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(-18deg);
+  background: black;
+}
+#tick_5 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(22.5deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(22.5deg);
+  background: black;
+}
+#tick_-5 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(-22.5deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(-22.5deg);
+  background: black;
+}
+#tick_6 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(27deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(27deg);
+  background: black;
+}
+#tick_-6 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(-27deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(-27deg);
+  background: black;
+}
+#tick_7 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(31.5deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(31.5deg);
+  background: black;
+}
+#tick_-7 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(-31.5deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(-31.5deg);
+  background: black;
+}
+#tick_8 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(36deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(36deg);
+  background: black;
+}
+#tick_-8 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(-36deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(-36deg);
+  background: black;
+}
+#tick_9 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(40.5deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(40.5deg);
+  background: black;
+}
+#tick_-9 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(-40.5deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(-40.5deg);
+  background: black;
+}
+#tick_10 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(45deg);
+  background: black;
+}
+#tick_-10 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(-45deg);
+  background: black;
+}
+#tick_10 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 60px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(10);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(10);
+  background: black;
+}
+#tick_-10 {
+  top: 50px;
+  left: 198px;
+  position: absolute;
+  width: 4px;
+  height: 60px;
+  -webkit-transform-origin: 50% 400px;
+  -webkit-transform: rotate(10);
+  -moz-transform-origin: 50% 400px;
+  -moz-transform: rotate(10);
+  background: black;
+}
+#needle2 {
+  margin: 0 auto;
+  top: 95px;
+  position: relative;
+  width: 3px;
+  height:200px;
+  border-width: 65px 2px 0;
+  border-style: solid;
+  border-color: black;
+  -webkit-transform-origin: 50% 305px;
+  -moz-transform-origin: 50% 305px;
+  -ms-transform-origin: 50% 305px;
+  -o-transform-origin: 50% 305px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+}
+
+#needle2:before {
+  content: "";
+  position: absolute;
+  top: -95px;
+  left: -4px;
+  border-width: 0 4px 35px;
+  border-style: solid;
+  border-color: transparent transparent black;
+}
+#noteView {
+  font-family: Verdana;
+  top:400px;
+  left: 150px;
+  width: 200px;
+  height: 400px;
+  text-align: left;
+  display: table-cell;
+  vertical-align: bottom;
+  position: absolute;
+  font-size: 150px;
+  color: black;
+}
+.sharp {
+  font-family: 'Digital W00';
+  font-size: 60px;
+  left:20px;
+  background-color:red;
+  margin-top:5px;
+}
