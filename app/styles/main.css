@@ -5,6 +5,11 @@ body {
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
+.jumbotron{
+  padding: 0px;
+}
+
+
 .header,
 .marketing,
 .footer {
@@ -496,8 +501,7 @@ body, p, div{
 }
 #noteView {
   font-family: Verdana;
-  top:400px;
-  left: 150px;
+  left: 0px;
   width: 200px;
   height: 400px;
   text-align: left;

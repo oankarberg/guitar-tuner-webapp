@@ -149,6 +149,43 @@ angular.module('guitarTunerAppApp')
   {
       numFreq = typeof numFreq !== 'undefined' ? numFreq : 2000;
 
+      var vec1 = inputVector;
+      var vec2 = [], vec3 = [], vec4 = [], vec5 = [];
+  
+      //console.log(vec1);
+
+      for(var i = 0; i < numFreq; i++)
+      {
+        if(i%2 == 0)
+          vec2.push(inputVector[i]);      
+        if(i%3 == 0)
+          vec3.push(inputVector[i]);
+        if(i%4 == 0)
+          vec4.push(inputVector[i]);
+        if(i%5 == 0)
+          vec5.push(inputVector[i]);
+      }
+
+      var zeroArray = [];
+      var length = 0;
+      while(length < 2000)
+      {
+        zeroArray.push(0);
+        console.log('zeros! ');
+        length++;
+      }
+      vec2.concat(zeroArray);
+      vec3.concat(zeroArray);
+      vec4.concat(zeroArray);
+      vec5.concat(zeroArray);
+
+      var SumVec = [];
+      for(var i = 0; i < numFreq; i++)
+      {
+        SumVec[i] = vec1[i] + vec2[i] +  vec3[i] + vec4[i] + vec5[i];
+      }
+
+
       var peaks = [];
       var peakMax = 0;
       var peakMaxInd = 0;
