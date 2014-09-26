@@ -162,7 +162,7 @@ body, p, div{
   line-height: 0;
 }
 
-.tipHighlighted {
+.tip {
   margin: 0 auto;
   width: 4px;
   height: 0;
@@ -175,8 +175,8 @@ body, p, div{
   top: 50px;
   left: 198px;
   position: absolute;
-  width: 4px;
-  height: 60px;
+  width: 8px;
+  height: 160px;
   -webkit-transform-origin: 50% 400px;
   -webkit-transform: rotate(0);
   -moz-transform-origin: 50% 400px;
@@ -188,25 +188,49 @@ body, p, div{
   top: 50px;
   left: 198px;
   position: absolute;
-  width: 4px;
-  height: 60px;
+  width: 8px;
+  height: 160px;
   -webkit-transform-origin: 50% 400px;
   -webkit-transform: rotate(0);
   -moz-transform-origin: 50% 400px;
   -moz-transform: rotate(0);
-  background: red;
+  
+  border: 1px solid rgb(86, 180, 239);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgba(82, 168, 236, 0.6);
+
 }
+
+.tickHighlighted{
+  background-color:red;
+  opacity:0.8;
+  border-color: red !important;
+  box-shadow: 0 0 10px red;
+}
+
+.tick_0Highlighted{
+  background-color:green;
+  opacity:0.8;
+  border-color: green !important;
+  box-shadow: 0 0 10px green;
+}
+
 
 #tick_0 {
   top: 45px;
   left: 198px;
   position: absolute;
-  width: 4px;
-  height: 60px;
+  width: 8px;
+  height: 160px;
   -webkit-transform-origin: 50% 400px;
   -webkit-transform: rotate(0);
   -moz-transform-origin: 50% 400px;
   -moz-transform: rotate(0);
+
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 #tick_1 {
@@ -214,264 +238,238 @@ body, p, div{
   left: 198px;
   position: absolute;
   width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(4.5deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(4.5deg);
-  background: black;
+  height: 115px;
+  -webkit-transform: translate(30px, 40px);
+  transform: translate(30px, 40px);
+
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
+
 #tick_-1 {
   top: 50px;
   left: 198px;
   position: absolute;
   width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(-4.5deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(-4.5deg);
-  background: black;
+  height: 115px;
+  -webkit-transform: translate(-30px, 40px);
+  transform: translate(-30px, 40px);
+
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
+
 #tick_2 {
   top: 50px;
   left: 198px;
   position: absolute;
   width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(9deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(9deg);
-  background: black;
+  height: 100px;
+  -webkit-transform: translate(60px, 55px);
+  transform: translate(60px, 55px);
+
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  outline: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
+
 #tick_-2 {
   top: 50px;
   left: 198px;
   position: absolute;
   width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(-9deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(-9deg);
-  background: black;
+  height: 100px;
+  -webkit-transform: translate(-60px, 55px);
+  transform: translate(-60px, 55px);
+
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  outline: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
+
 #tick_3 {
   top: 50px;
   left: 198px;
   position: absolute;
   width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(13.5deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(13.5deg);
-  background: black;
+  height: 85px;
+  -webkit-transform: translate(90px, 70px);
+  transform: translate(90px, 70px);
+
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  outline: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
+
 #tick_-3 {
   top: 50px;
   left: 198px;
   position: absolute;
   width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(-13.5deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(-13.5deg);
-  background: black;
+  height: 85px;
+  -webkit-transform: translate(-90px, 70px);
+  transform: translate(-90px, 70px);
+
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  outline: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
+
 #tick_4 {
   top: 50px;
   left: 198px;
   position: absolute;
   width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(18deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(18deg);
-  background: black;
+  height: 70px;
+  -webkit-transform: translate(120px, 85px);
+  transform: translate(120px, 85px);
+
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  outline: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 #tick_-4 {
   top: 50px;
   left: 198px;
   position: absolute;
   width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(-18deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(-18deg);
-  background: black;
+  height: 70px;
+  -webkit-transform: translate(-120px, 85px);
+  transform: translate(-120px, 85px);
+
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  outline: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 #tick_5 {
   top: 50px;
   left: 198px;
   position: absolute;
   width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(22.5deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(22.5deg);
-  background: black;
+  height: 55px;
+  -webkit-transform: translate(150px, 100px);
+  transform: translate(150px, 100px);
+
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  outline: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 #tick_-5 {
-  top: 50px;
+    top: 50px;
   left: 198px;
   position: absolute;
   width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(-22.5deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(-22.5deg);
-  background: black;
+  height: 55px;
+  -webkit-transform: translate(-150px, 100px);
+  transform: translate(-150px, 100px);
+
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 #tick_6 {
   top: 50px;
   left: 198px;
   position: absolute;
   width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(27deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(27deg);
-  background: black;
+  height: 40px;
+  -webkit-transform: translate(180px, 115px);
+  transform: translate(180px, 115px);
+
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  outline: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 #tick_-6 {
   top: 50px;
   left: 198px;
   position: absolute;
   width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(-27deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(-27deg);
-  background: black;
+  height: 40px;
+  -webkit-transform: translate(-180px, 115px);
+  transform: translate(-180px, 115px);
+
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  outline: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 #tick_7 {
   top: 50px;
   left: 198px;
   position: absolute;
   width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(31.5deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(31.5deg);
-  background: black;
+  height: 25px;
+  -webkit-transform: translate(210px, 130px);
+  transform: translate(210px, 130px);
+
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  outline: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 #tick_-7 {
   top: 50px;
   left: 198px;
   position: absolute;
   width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(-31.5deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(-31.5deg);
-  background: black;
-}
-#tick_8 {
-  top: 50px;
-  left: 198px;
-  position: absolute;
-  width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(36deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(36deg);
-  background: black;
-}
-#tick_-8 {
-  top: 50px;
-  left: 198px;
-  position: absolute;
-  width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(-36deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(-36deg);
-  background: black;
-}
-#tick_9 {
-  top: 50px;
-  left: 198px;
-  position: absolute;
-  width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(40.5deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(40.5deg);
-  background: black;
-}
-#tick_-9 {
-  top: 50px;
-  left: 198px;
-  position: absolute;
-  width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(-40.5deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(-40.5deg);
-  background: black;
-}
-#tick_10 {
-  top: 50px;
-  left: 198px;
-  position: absolute;
-  width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(45deg);
-  background: black;
-}
-#tick_-10 {
-  top: 50px;
-  left: 198px;
-  position: absolute;
-  width: 4px;
-  height: 30px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(-45deg);
-  background: black;
-}
-#tick_10 {
-  top: 50px;
-  left: 198px;
-  position: absolute;
-  width: 4px;
-  height: 60px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(10);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(10);
-  background: black;
-}
-#tick_-10 {
-  top: 50px;
-  left: 198px;
-  position: absolute;
-  width: 4px;
-  height: 60px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(10);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(10);
-  background: black;
+  height: 25px;
+  -webkit-transform: translate(-210px, 130px);
+  transform: translate(-210px, 130px);
+
+  display: inline-block;
+  padding: 4px;
+  margin: 0;
+  outline: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 #needle2 {
   margin: 0 auto;
@@ -536,8 +534,8 @@ body, p, div{
   height: 200px;
 }
 
-#sp_0, #sp_1, #sp_2, #sp_3
-,#sp_4, #sp_5, #sp_6 ,
+#sp_0, #sp_1, #sp_2, #sp_3,
+#sp_4, #sp_5, #sp_6 ,
 #sp_7, #sp_8, #sp_9 ,
 #sp_10, #sp_11, #sp_12 ,
 #sp_13, #sp_14, #sp_15 ,
