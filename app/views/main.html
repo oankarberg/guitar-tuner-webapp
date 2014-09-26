@@ -24,11 +24,11 @@
 </div>
 <div id="spectrumWrapper"> 
 
-    <div id="stapleWrapper">
-    <div id="sp_1">
-    </div>
+    <div id="stapleWrapper" ng-repeat="staple in sp track by $index">
+        <div id="sp_{{$index}}">
+        </div>
   </div>
-    <div id="stapleWrapper">
+    <!-- <div id="stapleWrapper">
     <div id="sp_2">
     </div>
   </div>
@@ -183,7 +183,7 @@
     <div id="stapleWrapper">
     <div id="sp_40">
     </div>
-    </div>
+    </div> -->
 
 </div>
 

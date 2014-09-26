@@ -524,7 +524,7 @@ body, p, div{
   height: 300px;
   width: 700px;
   position: relative;
-  text-align: middle;
+  text-align: center;
 }
 #stapleWrapper{
 
@@ -532,11 +532,11 @@ body, p, div{
   display: inline-block;
   padding: 0px;
   margin: 0px;
-  width:  14px;
+  width:  16px;
   height: 200px;
 }
 
-#sp_1, #sp_2, #sp_3
+#sp_0, #sp_1, #sp_2, #sp_3
 ,#sp_4, #sp_5, #sp_6 ,
 #sp_7, #sp_8, #sp_9 ,
 #sp_10, #sp_11, #sp_12 ,
@@ -561,8 +561,7 @@ body, p, div{
 #sp_36,
 #sp_37,
 #sp_38,
-#sp_39,
-#sp_40{
+#sp_39{
   width: 14px;
   border: 1px solid black;
   bottom: 0;

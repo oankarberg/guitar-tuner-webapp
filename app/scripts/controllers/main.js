@@ -15,6 +15,13 @@ angular.module('guitarTunerAppApp')
       'Karma'
     ];
 
+    $scope.sp = [];
+    $scope.sp[39] = 0;
+    console.log("length " , $scope.sp.length );
+
+    
+      
+
   var numTicks = 10;
   var dialDegrees = 45;
   $scope.timer = "Pausad"
@@ -179,48 +186,7 @@ angular.module('guitarTunerAppApp')
       vec4.concat(zeroArray);
       vec5.concat(zeroArray);
 
-      var sp1 = document.getElementById("sp_1");
-      var sp2 = document.getElementById("sp_2");
-      var sp3 = document.getElementById("sp_3");
-      var sp4 = document.getElementById("sp_4");
-      var sp5 = document.getElementById("sp_5");
-      var sp6 = document.getElementById("sp_6");
-      var sp7 = document.getElementById("sp_7");
-      var sp8 = document.getElementById("sp_8");
-      var sp9 = document.getElementById("sp_9");
-      var sp10 = document.getElementById("sp_10");
-      var sp11 = document.getElementById("sp_11");
-      var sp12 = document.getElementById("sp_12");
-      var sp13 = document.getElementById("sp_13");
-      var sp14 = document.getElementById("sp_14");
-      var sp15 = document.getElementById("sp_15");
-      var sp16 = document.getElementById("sp_16");
-      var sp17 = document.getElementById("sp_17");
-      var sp18 = document.getElementById("sp_18");
-      var sp19 = document.getElementById("sp_19");
-      var sp20 = document.getElementById("sp_20");
-      var sp21 = document.getElementById("sp_21");
-      var sp22 = document.getElementById("sp_22");
-      var sp23 = document.getElementById("sp_23");
-      var sp24 = document.getElementById("sp_24");
-      var sp25 = document.getElementById("sp_25");
-      var sp26 = document.getElementById("sp_26");
-      var sp27 = document.getElementById("sp_27");
-      var sp28 = document.getElementById("sp_28");
-      var sp29 = document.getElementById("sp_29");
-      var sp30 = document.getElementById("sp_30");
-      var sp31 = document.getElementById("sp_31");
-      var sp32 = document.getElementById("sp_32");
-      var sp33 = document.getElementById("sp_33");
-      var sp34 = document.getElementById("sp_34");
-      var sp35 = document.getElementById("sp_35");
-      var sp36 = document.getElementById("sp_36");
-      var sp37 = document.getElementById("sp_37");
-      var sp38 = document.getElementById("sp_38");
-      var sp39 = document.getElementById("sp_39");
-      var sp40 = document.getElementById("sp_40");
-
-
+      
 
       
       
@@ -266,47 +232,16 @@ angular.module('guitarTunerAppApp')
           }
 
       }
+      for(var i = 1; i <=40; i++)
+      {
+        $scope.sp[i] = document.getElementById("sp_" + i + "");
+      }
+
       // console.log('vecAverageAmp ' , vecAverageAmp);
-       sp1.style.height = '' + 50*vecAverageAmp[0] +'px';
-       sp2.style.height = '' + 50*vecAverageAmp[1] +'px';
-       sp3.style.height = '' + 50*vecAverageAmp[2] +'px';
-       sp4.style.height = '' + 50*vecAverageAmp[3] +'px';
-       sp5.style.height = '' + 50*vecAverageAmp[4] +'px';
-       sp6.style.height = '' + 50*vecAverageAmp[5] +'px';
-       sp7.style.height = '' + 50*vecAverageAmp[6] +'px';
-       sp8.style.height = '' + 50*vecAverageAmp[7] +'px';
-       sp9.style.height = '' + 50*vecAverageAmp[8] +'px';
-       sp10.style.height  = '' + 50*vecAverageAmp[9] + 'px';
-       sp11.style.height  = '' + 50*vecAverageAmp[10] + 'px';
-       sp12.style.height  = '' + 50*vecAverageAmp[11] + 'px';
-       sp13.style.height  = '' + 50*vecAverageAmp[12] + 'px';
-       sp14.style.height  = '' + 50*vecAverageAmp[13] + 'px';
-       sp15.style.height  = '' + 50*vecAverageAmp[14] + 'px';
-       sp16.style.height  = '' + 50*vecAverageAmp[15] + 'px';
-       sp17.style.height  = '' + 50*vecAverageAmp[16] + 'px';
-       sp18.style.height  = '' + 50*vecAverageAmp[17] + 'px';
-       sp19.style.height  = '' + 50*vecAverageAmp[18] + 'px';
-       sp20.style.height  = '' + 50*vecAverageAmp[19] + 'px';
-       sp21.style.height  = '' + 50*vecAverageAmp[20] + 'px';
-       sp22.style.height  = '' + 50*vecAverageAmp[21] + 'px';
-       sp23.style.height  = '' + 50*vecAverageAmp[22] + 'px';
-       sp24.style.height  = '' + 50*vecAverageAmp[23] + 'px';
-       sp25.style.height  = '' + 50*vecAverageAmp[24] + 'px';
-       sp26.style.height  = '' + 50*vecAverageAmp[25] + 'px';
-       sp27.style.height  = '' + 50*vecAverageAmp[26] + 'px';
-       sp28.style.height  = '' + 50*vecAverageAmp[27] + 'px';
-       sp29.style.height  = '' + 50*vecAverageAmp[28] + 'px';
-       sp30.style.height  = '' + 50*vecAverageAmp[29] + 'px';
-       sp31.style.height  = '' + 50*vecAverageAmp[30] + 'px';
-       sp32.style.height  = '' + 50*vecAverageAmp[31] + 'px';
-       sp33.style.height  = '' + 50*vecAverageAmp[32] + 'px';
-       sp34.style.height  = '' + 50*vecAverageAmp[33] + 'px';
-       sp35.style.height  = '' + 50*vecAverageAmp[34] + 'px';
-       sp36.style.height  = '' + 50*vecAverageAmp[35] + 'px';
-       sp37.style.height  = '' + 50*vecAverageAmp[36] + 'px';
-       sp38.style.height  = '' + 50*vecAverageAmp[37] + 'px';
-       sp39.style.height  = '' + 50*vecAverageAmp[38] + 'px';
-       sp40.style.height  = '' + 50*vecAverageAmp[39] + 'px';
+      for(var i = 0; i < vecAverageAmp.length; i++){
+        $scope.sp[i+1].style.height = '' + 50*vecAverageAmp[i] +'px';
+      }
+
 
 
       return {"peakInd":peakMaxInd,"peakAmp":peakMax};
