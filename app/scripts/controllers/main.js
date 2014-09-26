@@ -15,9 +15,9 @@ angular.module('guitarTunerAppApp')
       'Karma'
     ];
 
-    $scope.sp = [];
-    $scope.sp[39] = 0;
-    console.log("length " , $scope.sp.length );
+    // $scope.sp = [];
+    // $scope.sp[39] = 0;
+    // console.log("length " , $scope.sp.length );
 
     
       
@@ -186,14 +186,6 @@ angular.module('guitarTunerAppApp')
       vec4.concat(zeroArray);
       vec5.concat(zeroArray);
 
-      
-
-      
-      
-
-
-
-
 
       var SumVec = [];
       for(var i = 0; i < numFreq; i++)
@@ -207,7 +199,7 @@ angular.module('guitarTunerAppApp')
       var peakMaxInd = 0;
       var size = inputVector.length * 2;
       var whichStaple = 0;
-      var vecAverageAmp = [];
+      $scope.vecAverageAmp = [];
       var sum = 0;
 
       
@@ -219,7 +211,8 @@ angular.module('guitarTunerAppApp')
           sum += inputVector[i];
           if(i%25 === 0 && i < 1000) 
           {
-            vecAverageAmp.push((sum/25));
+            // Används i direktiv
+            $scope.vecAverageAmp.push((sum/25));
             whichStaple++;
             sum = 0;
 
@@ -232,15 +225,15 @@ angular.module('guitarTunerAppApp')
           }
 
       }
-      for(var i = 1; i <=40; i++)
-      {
-        $scope.sp[i] = document.getElementById("sp_" + i + "");
-      }
+      // for(var i = 1; i <=40; i++)
+      // {
+      //   $scope.sp[i] = document.getElementById("sp_" + i + "");
+      // }
 
-      // console.log('vecAverageAmp ' , vecAverageAmp);
-      for(var i = 0; i < vecAverageAmp.length; i++){
-        $scope.sp[i+1].style.height = '' + 50*vecAverageAmp[i] +'px';
-      }
+      // console.log('$scope.vecAverageAmp ' , $scope.vecAverageAmp);
+      // for(var i = 0; i < $scope.vecAverageAmp.length; i++){
+      //   $scope.sp[i+1].style.height = '' + 50*$scope.vecAverageAmp[i] +'px';
+      // }
 
 
 
@@ -275,7 +268,7 @@ angular.module('guitarTunerAppApp')
   function getNoteInfo(frequency)
   {
       var note = (Math.round(57+log2( frequency/440.0 )*12 ))%12;
-      console.log(note);
+      // console.log(note);
       var noteFull = Math.round(log2( frequency/440.0 )*12);
       var noteFreq = Math.pow(2,noteFull/12.0)*440.0;
       var errorMin = frequency - noteFreq;
@@ -339,7 +332,6 @@ angular.module('guitarTunerAppApp')
           if (peakInfo["peakAmp"] > 0.5)    //använd bara peakar över 0.5 för bättre nogrannhet
           {
               var frequency = peakInfo["peakInd"]*sampleRate/audioWindowSize;   //omvandla till frekvens
-              console.log('FREQUENCY ' , frequency);
               var noteInfo = getNoteInfo(frequency);      //Hämta info från noter
               updateTuner(noteInfo["noteIndex"],noteInfo["noteError"]);
           }

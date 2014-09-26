@@ -568,3 +568,10 @@ body, p, div{
   position: absolute;
   background: green;
 }
+#stapleInDir{
+  width: 14px;
+  border: 1px solid black;
+  bottom: 0;
+  position: absolute;
+  background: green;
+}
