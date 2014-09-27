@@ -16,14 +16,20 @@ angular.module('guitarTunerAppApp')
       },
       link: function postLink(scope, element, attrs) {
         scope.stapleStyle = [];
-        scope.$watch('spectrumData', function() {
-          for(var i = 0; i < scope.spectrumData.length; i++){
-            scope.stapleStyle[i] = 
-              {
-                height : '' + 50*scope.spectrumData[i] +'px' 
-              };
-          }
-        });
+
+
+          scope.$watch('spectrumData', function() {
+
+              for(var i = 0; i < scope.spectrumData.length; i++){
+                scope.stapleStyle[i] = 
+                  {
+                    height : '' + 50*scope.spectrumData[i] +'px' 
+                  };
+              }
+
+          });
+
+    
 
         
 

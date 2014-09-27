@@ -20,8 +20,6 @@ angular.module('guitarTunerAppApp')
     // console.log("length " , $scope.sp.length );
 
     
-      
-
   var numTicks = 10;
   var dialDegrees = 45;
   $scope.timer = "Pausad"
@@ -120,30 +118,44 @@ angular.module('guitarTunerAppApp')
 
     var sharpHtml = '<sup class="sharp">#</sup>';
     var notes = ['C','C'+sharpHtml,'D','D'+sharpHtml,'E','F','F'+sharpHtml,'G','G'+sharpHtml,'A','A'+sharpHtml,'B'];
+    
+
     var needle = document.getElementById("needle2");
 
     var degrees = noteError*2.0*dialDegrees;
-    needle.style.webkitTransform = 'rotate('+degrees+'deg)';
-    needle.style.MozTransform = 'rotate('+degrees+'deg)';
+  //  needle.style.webkitTransform = 'rotate('+degrees+'deg)';
+    //needle.style.MozTransform = 'rotate('+degrees+'deg)';
 
+    //Gånger faktor 5 istället..
+    needle.style["-webkit-transform"] = "translate(" + 5*degrees + "px, 0px)";
+    needle.style["-moz-transform"] = "translate(-" + 5*degrees + "px, 0px)";
+
+//    console.log('error', 5*degrees);
+  //  console.log('mod 30', Math.round((5*degrees)/30));
+
+    for(var i = 0; i < 8; i++){
+
+        //console.log('tick_-' + i);
+       // console.log(document.getElementById('tick_' + i))
+        document.getElementById('tick_' + i).className = "";
+        document.getElementById("tick_"+(-1)*i).className = "";
+
+    }
     var noteView = document.getElementById("noteView");
     noteView.innerHTML = notes[noteIndex];
 
-    //var body = document.getElementsByTagName("body")[0];
-
     if (Math.abs(noteError) < 0.05)
     {
-      var tip = document.getElementById("tip");
       var tick = document.getElementById("tick_0");
-      tip.className = "tipHighlighted";
-      tick.className = "tick_0_highlighted";
+      tick.className = "tick_0Highlighted";
     }
     else
     {
-      var tip = document.getElementById("tip");
       var tick = document.getElementById("tick_0");
-      tip.className = "tipNormal";
       tick.className = "tick_0_normal";
+
+      var tickToHighlight = document.getElementById('tick_' + Math.round((5*degrees)/30));
+      tickToHighlight.className = "tickHighlighted";
     }
     
   }
@@ -186,23 +198,17 @@ angular.module('guitarTunerAppApp')
       vec4.concat(zeroArray);
       vec5.concat(zeroArray);
 
-
       var SumVec = [];
       for(var i = 0; i < numFreq; i++)
-      {
-        SumVec[i] = vec1[i] + vec2[i] +  vec3[i] + vec4[i] + vec5[i];
-      }
-
-
+          SumVec[i] = vec1[i] + vec2[i] +  vec3[i] + vec4[i] + vec5[i];
       
+
       var peakMax = 0;
       var peakMaxInd = 0;
       var size = inputVector.length * 2;
       var whichStaple = 0;
       $scope.vecAverageAmp = [];
       var sum = 0;
-
-      
 
       for(var i=7;i<numFreq;i++)
       {

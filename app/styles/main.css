@@ -172,32 +172,9 @@ body, p, div{
 }
 
 .tick_0_normal {
-  top: 50px;
-  left: 198px;
-  position: absolute;
-  width: 8px;
-  height: 160px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(0);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(0);
-  background: black;
-}
-
-.tick_0_highlighted {
-  top: 50px;
-  left: 198px;
-  position: absolute;
-  width: 8px;
-  height: 160px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(0);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(0);
-  
-  border: 1px solid rgb(86, 180, 239);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgba(82, 168, 236, 0.6);
-
+  background-color:white;
+  opacity:0.8;
+  border-color: #ccc !important;
 }
 
 .tickHighlighted{
@@ -221,10 +198,6 @@ body, p, div{
   position: absolute;
   width: 8px;
   height: 160px;
-  -webkit-transform-origin: 50% 400px;
-  -webkit-transform: rotate(0);
-  -moz-transform-origin: 50% 400px;
-  -moz-transform: rotate(0);
 
   display: inline-block;
   padding: 4px;
@@ -239,8 +212,8 @@ body, p, div{
   position: absolute;
   width: 4px;
   height: 115px;
-  -webkit-transform: translate(30px, 40px);
-  transform: translate(30px, 40px);
+  -webkit-transform: translate(30px, 20px);
+  transform: translate(30px, 20px);
 
   display: inline-block;
   padding: 4px;
@@ -255,8 +228,8 @@ body, p, div{
   position: absolute;
   width: 4px;
   height: 115px;
-  -webkit-transform: translate(-30px, 40px);
-  transform: translate(-30px, 40px);
+  -webkit-transform: translate(-30px, 20px);
+  transform: translate(-30px, 20px);
 
   display: inline-block;
   padding: 4px;
@@ -271,14 +244,13 @@ body, p, div{
   position: absolute;
   width: 4px;
   height: 100px;
-  -webkit-transform: translate(60px, 55px);
-  transform: translate(60px, 55px);
+  -webkit-transform: translate(60px, 27.5px);
+  transform: translate(60px, 27.5px);
 
   display: inline-block;
   padding: 4px;
   margin: 0;
   outline: 0;
-  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -289,14 +261,13 @@ body, p, div{
   position: absolute;
   width: 4px;
   height: 100px;
-  -webkit-transform: translate(-60px, 55px);
-  transform: translate(-60px, 55px);
+  -webkit-transform: translate(-60px, 27.5px);
+  transform: translate(-60px, 27.5px);
 
   display: inline-block;
   padding: 4px;
   margin: 0;
   outline: 0;
-  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -307,14 +278,13 @@ body, p, div{
   position: absolute;
   width: 4px;
   height: 85px;
-  -webkit-transform: translate(90px, 70px);
-  transform: translate(90px, 70px);
+  -webkit-transform: translate(90px, 35px);
+  transform: translate(90px, 35px);
 
   display: inline-block;
   padding: 4px;
   margin: 0;
   outline: 0;
-  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -325,14 +295,13 @@ body, p, div{
   position: absolute;
   width: 4px;
   height: 85px;
-  -webkit-transform: translate(-90px, 70px);
-  transform: translate(-90px, 70px);
+  -webkit-transform: translate(-90px, 35px);
+  transform: translate(-90px, 35px);
 
   display: inline-block;
   padding: 4px;
   margin: 0;
   outline: 0;
-  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -343,14 +312,13 @@ body, p, div{
   position: absolute;
   width: 4px;
   height: 70px;
-  -webkit-transform: translate(120px, 85px);
-  transform: translate(120px, 85px);
+  -webkit-transform: translate(120px, 42.5px);
+  transform: translate(120px, 42.5px);
 
   display: inline-block;
   padding: 4px;
   margin: 0;
   outline: 0;
-  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -360,14 +328,13 @@ body, p, div{
   position: absolute;
   width: 4px;
   height: 70px;
-  -webkit-transform: translate(-120px, 85px);
-  transform: translate(-120px, 85px);
+  -webkit-transform: translate(-120px, 42.5px);
+  transform: translate(-120px, 42.5px);
 
   display: inline-block;
   padding: 4px;
   margin: 0;
   outline: 0;
-  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -377,14 +344,13 @@ body, p, div{
   position: absolute;
   width: 4px;
   height: 55px;
-  -webkit-transform: translate(150px, 100px);
-  transform: translate(150px, 100px);
+  -webkit-transform: translate(150px, 50px);
+  transform: translate(150px, 50px);
 
   display: inline-block;
   padding: 4px;
   margin: 0;
   outline: 0;
-  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -394,8 +360,8 @@ body, p, div{
   position: absolute;
   width: 4px;
   height: 55px;
-  -webkit-transform: translate(-150px, 100px);
-  transform: translate(-150px, 100px);
+  -webkit-transform: translate(-150px, 50px);
+  transform: translate(-150px, 50px);
 
   display: inline-block;
   padding: 4px;
@@ -409,14 +375,13 @@ body, p, div{
   position: absolute;
   width: 4px;
   height: 40px;
-  -webkit-transform: translate(180px, 115px);
-  transform: translate(180px, 115px);
+  -webkit-transform: translate(180px, 57.5px);
+  transform: translate(180px, 57.5px);
 
   display: inline-block;
   padding: 4px;
   margin: 0;
   outline: 0;
-  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -426,14 +391,13 @@ body, p, div{
   position: absolute;
   width: 4px;
   height: 40px;
-  -webkit-transform: translate(-180px, 115px);
-  transform: translate(-180px, 115px);
+  -webkit-transform: translate(-180px, 57.5px);
+  transform: translate(-180px, 57.5px);
 
   display: inline-block;
   padding: 4px;
   margin: 0;
   outline: 0;
-  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -443,14 +407,13 @@ body, p, div{
   position: absolute;
   width: 4px;
   height: 25px;
-  -webkit-transform: translate(210px, 130px);
-  transform: translate(210px, 130px);
+  -webkit-transform: translate(210px, 65px);
+  transform: translate(210px, 65px);
 
   display: inline-block;
   padding: 4px;
   margin: 0;
   outline: 0;
-  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -460,43 +423,38 @@ body, p, div{
   position: absolute;
   width: 4px;
   height: 25px;
-  -webkit-transform: translate(-210px, 130px);
-  transform: translate(-210px, 130px);
+  -webkit-transform: translate(-210px, 65px);
+  transform: translate(-210px, 65px);
 
   display: inline-block;
   padding: 4px;
   margin: 0;
   outline: 0;
-  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 #needle2 {
-  margin: 0 auto;
-  top: 95px;
-  position: relative;
-  width: 3px;
-  height:200px;
-  border-width: 65px 2px 0;
-  border-style: solid;
-  border-color: black;
-  -webkit-transform-origin: 50% 305px;
-  -moz-transform-origin: 50% 305px;
-  -ms-transform-origin: 50% 305px;
-  -o-transform-origin: 50% 305px;
+  
+
+  display:none;
+  top: 45px;
+  left: 198px;
+  position: absolute;
+  width: 8px;
+  height: 160px;
+  -moz-transform-origin: 50% 400px;
+
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
+  
+  padding: 4px;
+  margin: 0;
+  border: 1px solid black;
+  z-index:1;
+  border-radius: 3px;
 }
 
-#needle2:before {
-  content: "";
-  position: absolute;
-  top: -95px;
-  left: -4px;
-  border-width: 0 4px 35px;
-  border-style: solid;
-  border-color: transparent transparent black;
-}
+
 #noteView {
   font-family: Verdana;
   left: 0px;
