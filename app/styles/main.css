@@ -2,6 +2,7 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color:#333;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -140,14 +141,27 @@ body, p, div{
 #tunerViewContainer {
   position: relative;
   width:100%;
-  background: white;
   text-align: center;
+  background-color:#434343;
+  border-radius:10px;
+  margin-bottom:10px;
+   -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 1);
+  -moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 1);
+  box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 1);
+}
+
+#noteViewContainer{
+  top:20px; margin: 0 auto; 
+  position:relative;
+  height:200px; width:200px;
+ 
+
 }
 
 #tunerView {
   margin: 0 auto;
   position: relative;
-  height: 500px;
+  height: 400px;
   width: 400px;
 }
 
@@ -172,7 +186,6 @@ body, p, div{
 }
 
 .tick_0_normal {
-  background-color:white;
   opacity:0.8;
   border-color: #ccc !important;
 }
@@ -182,6 +195,11 @@ body, p, div{
   opacity:0.8;
   border-color: red !important;
   box-shadow: 0 0 10px red;
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .tick_0Highlighted{
@@ -190,7 +208,6 @@ body, p, div{
   border-color: green !important;
   box-shadow: 0 0 10px green;
 }
-
 
 #tick_0 {
   top: 45px;
@@ -460,13 +477,13 @@ body, p, div{
   left: 0px;
   width: 200px;
   height: 400px;
-  text-align: left;
+  text-align: center;
   display: table-cell;
-  vertical-align: bottom;
   position: absolute;
   font-size: 150px;
   color: black;
 }
+
 .sharp {
   font-family: 'Digital W00';
   font-size: 60px;
