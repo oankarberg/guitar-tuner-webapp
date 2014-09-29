@@ -21,9 +21,12 @@ angular.module('guitarTunerAppApp')
           scope.$watch('spectrumData', function() {
 
               for(var i = 0; i < scope.spectrumData.length; i++){
+                var heightInPx = 35*scope.spectrumData[i];
+                if(heightInPx > 200)
+                  heightInPx = 200;
                 scope.stapleStyle[i] = 
                   {
-                    height : '' + 50*scope.spectrumData[i] +'px' 
+                    height : '' + heightInPx +'px' 
                   };
               }
 

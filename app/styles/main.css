@@ -140,13 +140,18 @@ body, p, div{
   background-color:#333;
   border-radius:10px;
 }
+#tunerViewContainer h2{
+  margin: 0 0 10px 0;
+  padding: 0;
+  text-align: center;
+}
 
 #noteViewContainer{
   margin: 0 auto; 
   position:relative;
   height:80px; 
   width:300px;
-
+  text-align: center
 }
 
 #noteView {
@@ -164,7 +169,7 @@ body, p, div{
 #tunerView {
   margin: 0 auto;
   position: relative;
-  height: 250px;
+  height: 215px;
   width: 400px;
 }
 
@@ -495,17 +500,17 @@ body, p, div{
   margin-left:0px;
 }
 
+/*SPECTRUM DIRECTIVE*/
+
 #spectrumWrapper{
   /*border: 2px solid black;*/
-  height: 300px;
-  width: 700px;
+  height: 200px;
+  width: 680px;
   position: relative;
   text-align: center;
 
 }
 #stapleWrapper{
-
-  top:100px;
   position: relative;
   display: inline-block;
   padding: 0px;
@@ -514,45 +519,11 @@ body, p, div{
   height: 200px;
 }
 
-#sp_0, #sp_1, #sp_2, #sp_3,
-#sp_4, #sp_5, #sp_6 ,
-#sp_7, #sp_8, #sp_9 ,
-#sp_10, #sp_11, #sp_12 ,
-#sp_13, #sp_14, #sp_15 ,
-#sp_16, #sp_17, #sp_18 ,
-#sp_19, #sp_20,
-#sp_21,
-#sp_22,
-#sp_23,
-#sp_24,
-#sp_25,
-#sp_26,
-#sp_27,
-#sp_28,
-#sp_29,
-#sp_30,
-#sp_31,
-#sp_32,
-#sp_33,
-#sp_34,
-#sp_35,
-#sp_36,
-#sp_37,
-#sp_38,
-#sp_39{
-  width: 12px;
-  border: 1px solid white;
-  bottom: 0;
-  position: absolute;
 
-  border-radius: 3px;
-  background: -webkit-linear-gradient(red, blue); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(red, blue); /* Standard syntax */
-}
+
 #stapleInDir{
-  border-radius: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
   width: 12px;
   border: 1px solid black;
   bottom: 0;
@@ -561,4 +532,31 @@ body, p, div{
   background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#86ff49, #095f00); /* Standard syntax */
+}
+
+#spectrumLine{
+  position: relative;
+  display: block;
+
+}
+
+#spectrumLow,
+#spectrumMiddle,
+#spectrumHigh{
+  display: inline-block;
+  position: absolute;
+}
+#spectrumLow{
+  top:0;
+  left:0;
+}
+#spectrumMiddle{
+  top:0;
+  left:50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(50%);
+}
+#spectrumHigh{
+  top:0;
+  right:0;
 }

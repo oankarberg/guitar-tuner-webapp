@@ -9,17 +9,14 @@
  */
 angular.module('guitarTunerAppApp')
   .controller('MainCtrl', function ($scope, $timeout, $window) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+   
+
 
     // $scope.sp = [];
     // $scope.sp[39] = 0;
     // console.log("length " , $scope.sp.length );
-
-    
+  $scope.noteFreq = 0;
+  $scope.$watch('noteFreq', function(){  });
   var numTicks = 10;
   var dialDegrees = 45;
   $scope.timer = "Pausad"
@@ -110,7 +107,7 @@ angular.module('guitarTunerAppApp')
     // var clock = document.getElementById("#message").text("Timeout: "+formatNumberLength(minutes,2)+":"+formatNumberLength(seconds,2));
   }
 
-  function updateTuner(noteIndex, noteError) 
+  function updateTuner(noteIndex, noteError, noteFrequency) 
   {
     //TODO: Assert params
     if(!(noteIndex && noteError) || !(noteIndex > 0 && noteIndex <12) || !(noteError > -50 && noteError < 50))
@@ -119,7 +116,7 @@ angular.module('guitarTunerAppApp')
     var sharpHtml = '<sup class="sharp">#</sup>';
     var notes = ['C','C'+sharpHtml,'D','D'+sharpHtml,'E','F','F'+sharpHtml,'G','G'+sharpHtml,'A','A'+sharpHtml,'B'];
     
-
+    $scope.noteFreq = Math.round(noteFrequency);
     var needle = document.getElementById("needle2");
 
     var degrees = noteError*2.0*dialDegrees;
@@ -130,6 +127,8 @@ angular.module('guitarTunerAppApp')
     needle.style["-webkit-transform"] = "translate(" + 5*degrees + "px, 0px)";
     needle.style["-moz-transform"] = "translate(-" + 5*degrees + "px, 0px)";
 
+
+
 //    console.log('error', 5*degrees);
   //  console.log('mod 30', Math.round((5*degrees)/30));
 
@@ -139,8 +138,6 @@ angular.module('guitarTunerAppApp')
        // console.log(document.getElementById('tick_' + i))
         document.getElementById('tick_' + i).className = "";
         document.getElementById("tick_"+(-1)*i).className = "";
-
-
 
     }
     var noteView = document.getElementById("noteView");
@@ -344,7 +341,7 @@ angular.module('guitarTunerAppApp')
           {
               var frequency = peakInfo["peakInd"]*sampleRate/audioWindowSize;   //omvandla till frekvens
               var noteInfo = getNoteInfo(frequency);      //Hämta info från noter
-              updateTuner(noteInfo["noteIndex"],noteInfo["noteError"]);
+              updateTuner(noteInfo["noteIndex"],noteInfo["noteError"], noteInfo["noteFreq"]);
           }
 
       }
