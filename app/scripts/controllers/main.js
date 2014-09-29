@@ -140,6 +140,8 @@ angular.module('guitarTunerAppApp')
         document.getElementById('tick_' + i).className = "";
         document.getElementById("tick_"+(-1)*i).className = "";
 
+
+
     }
     var noteView = document.getElementById("noteView");
     noteView.innerHTML = notes[noteIndex];
@@ -293,6 +295,9 @@ angular.module('guitarTunerAppApp')
   }
   // Create a stream of the audio input 
   function gotStream(stream) {
+
+      document.getElementById('playPause').style.display = 'block'
+
       var bufferSize = 2048; // Måste va power of 2, 
       gainNode = audioContext.createGain(); //Skapar GainNode objekt som kan kontrollera volymen
       gainNode.gain.value = 1000.0;

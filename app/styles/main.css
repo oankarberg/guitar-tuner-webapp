@@ -86,11 +86,10 @@ body {
 
 
 /* Empty. Add your own CSS if you like */
-
 body, p, div{
-  color: black !important;
+  color: #ccc !important;
 }
-
+.text-muted{color:#ccc !important;}
 
 #title {
   width: 300px;
@@ -98,8 +97,8 @@ body, p, div{
   float: right;
 }
 #control {
-  width: 400px;
-
+  
+  width:400px;
 }
 #message {
   font-family: Verdana;
@@ -108,60 +107,64 @@ body, p, div{
   top:500px;
 }
 #playPauseContainer {
-  float: left;
+
   width: 70px;
 }
 
 .pause {
   margin-left: 5px;
   width: 20px;
-  height: 50px;
-  border-left: 10px solid #FFFFFF;
-  border-right: 10px solid #FFFFFF;
+  height: 31px;
+  border-left: 6px solid #FFFFFF;
+  border-right: 6px solid #FFFFFF;
   line-height: 50px;
 }
 
 .play {
-  width: 0px;
-  height: 0px;
-  border-left: 50px solid black;
-  border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent;
+  border-left: 30px solid white;
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
   font-size: 0;
-  line-height: 0;
 }
 
 #playPause{
   z-index: 10;
-  position: fixed;
-  left: 0;
-  top: 400px;
-
+  position: relative;
+  left: 5px;
+  top: 380px;
+  display:none;
 }
 #tunerViewContainer {
   position: relative;
   width:100%;
-  text-align: center;
-  background-color:#434343;
+  background-color:#333;
   border-radius:10px;
-  margin-bottom:10px;
-   -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 1);
-  -moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 1);
-  box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 1);
 }
 
 #noteViewContainer{
-  top:20px; margin: 0 auto; 
+  margin: 0 auto; 
   position:relative;
-  height:200px; width:200px;
- 
+  height:80px; 
+  width:300px;
+
+}
+
+#noteView {
+  font-family: Verdana;
+  width: 150px;
+  height: 80px;
+  text-align: left;
+  position: relative;
+  font-size: 5.0em;
+  color:#ccc !important;
+  left:129px;
 
 }
 
 #tunerView {
   margin: 0 auto;
   position: relative;
-  height: 400px;
+  height: 250px;
   width: 400px;
 }
 
@@ -191,7 +194,7 @@ body, p, div{
 }
 
 .tickHighlighted{
-  background-color:red;
+  background-color:red !important;
   opacity:0.8;
   border-color: red !important;
   box-shadow: 0 0 10px red;
@@ -203,14 +206,14 @@ body, p, div{
 }
 
 .tick_0Highlighted{
-  background-color:green;
+  background-color:#66cc33 !important;
   opacity:0.8;
-  border-color: green !important;
-  box-shadow: 0 0 10px green;
+  border-color: #66cc33 !important;
+  box-shadow: 0 0 10px #66cc33;
 }
 
 #tick_0 {
-  top: 45px;
+  top: 25px;
   left: 198px;
   position: absolute;
   width: 8px;
@@ -220,11 +223,13 @@ body, p, div{
   padding: 4px;
   margin: 0;
   border: 1px solid #ccc;
+  background-color:#ccc;
   border-radius: 3px;
 }
 
 #tick_1 {
-  top: 50px;
+  background-color:#ccc;
+  top: 30px;
   left: 198px;
   position: absolute;
   width: 4px;
@@ -240,7 +245,8 @@ body, p, div{
 }
 
 #tick_-1 {
-  top: 50px;
+  background-color:#ccc;
+  top: 30px;
   left: 198px;
   position: absolute;
   width: 4px;
@@ -256,7 +262,8 @@ body, p, div{
 }
 
 #tick_2 {
-  top: 50px;
+  background-color:#ccc;
+  top: 30px;
   left: 198px;
   position: absolute;
   width: 4px;
@@ -273,7 +280,8 @@ body, p, div{
 }
 
 #tick_-2 {
-  top: 50px;
+  background-color:#ccc;
+  top: 30px;
   left: 198px;
   position: absolute;
   width: 4px;
@@ -290,7 +298,8 @@ body, p, div{
 }
 
 #tick_3 {
-  top: 50px;
+  background-color:#ccc;
+  top: 30px;
   left: 198px;
   position: absolute;
   width: 4px;
@@ -307,7 +316,8 @@ body, p, div{
 }
 
 #tick_-3 {
-  top: 50px;
+  background-color:#ccc;
+  top: 30px;
   left: 198px;
   position: absolute;
   width: 4px;
@@ -324,7 +334,8 @@ body, p, div{
 }
 
 #tick_4 {
-  top: 50px;
+  background-color:#ccc;
+  top: 30px;
   left: 198px;
   position: absolute;
   width: 4px;
@@ -340,7 +351,8 @@ body, p, div{
   border-radius: 3px;
 }
 #tick_-4 {
-  top: 50px;
+  background-color:#ccc;
+  top: 30px;
   left: 198px;
   position: absolute;
   width: 4px;
@@ -356,7 +368,8 @@ body, p, div{
   border-radius: 3px;
 }
 #tick_5 {
-  top: 50px;
+  background-color:#ccc;
+  top: 30px;
   left: 198px;
   position: absolute;
   width: 4px;
@@ -372,7 +385,8 @@ body, p, div{
   border-radius: 3px;
 }
 #tick_-5 {
-    top: 50px;
+  background-color:#ccc;
+  top: 30px;
   left: 198px;
   position: absolute;
   width: 4px;
@@ -387,7 +401,8 @@ body, p, div{
   border-radius: 3px;
 }
 #tick_6 {
-  top: 50px;
+  background-color:#ccc;
+  top: 30px;
   left: 198px;
   position: absolute;
   width: 4px;
@@ -403,7 +418,8 @@ body, p, div{
   border-radius: 3px;
 }
 #tick_-6 {
-  top: 50px;
+  background-color:#ccc;
+  top: 30px;
   left: 198px;
   position: absolute;
   width: 4px;
@@ -419,7 +435,8 @@ body, p, div{
   border-radius: 3px;
 }
 #tick_7 {
-  top: 50px;
+  background-color:#ccc;
+  top: 30px;
   left: 198px;
   position: absolute;
   width: 4px;
@@ -435,7 +452,8 @@ body, p, div{
   border-radius: 3px;
 }
 #tick_-7 {
-  top: 50px;
+  background-color:#ccc;
+  top: 30px;
   left: 198px;
   position: absolute;
   width: 4px;
@@ -452,9 +470,8 @@ body, p, div{
 }
 #needle2 {
   
-
   display:none;
-  top: 45px;
+  top: 35px;
   left: 198px;
   position: absolute;
   width: 8px;
@@ -472,24 +489,10 @@ body, p, div{
 }
 
 
-#noteView {
-  font-family: Verdana;
-  left: 0px;
-  width: 200px;
-  height: 400px;
-  text-align: center;
-  display: table-cell;
-  position: absolute;
-  font-size: 150px;
-  color: black;
-}
-
 .sharp {
-  font-family: 'Digital W00';
-  font-size: 60px;
-  left:20px;
-  background-color:red;
-  margin-top:5px;
+  font-family: 'Verdana';
+  font-size: 0.3em;
+  margin-left:0px;
 }
 
 #spectrumWrapper{
@@ -498,9 +501,11 @@ body, p, div{
   width: 700px;
   position: relative;
   text-align: center;
+
 }
 #stapleWrapper{
 
+  top:100px;
   position: relative;
   display: inline-block;
   padding: 0px;
@@ -535,16 +540,25 @@ body, p, div{
 #sp_37,
 #sp_38,
 #sp_39{
-  width: 14px;
-  border: 1px solid black;
+  width: 12px;
+  border: 1px solid white;
   bottom: 0;
   position: absolute;
-  background: green;
+
+  border-radius: 3px;
+  background: -webkit-linear-gradient(red, blue); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(red, blue); /* Standard syntax */
 }
 #stapleInDir{
-  width: 14px;
+  border-radius: 3px;
+  width: 12px;
   border: 1px solid black;
   bottom: 0;
   position: absolute;
-  background: green;
+  background: -webkit-linear-gradient(#86ff49, green); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#86ff49, #095f00); /* Standard syntax */
 }
