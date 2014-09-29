@@ -140,6 +140,11 @@ angular.module('guitarTunerAppApp')
         document.getElementById("tick_"+(-1)*i).className = "";
 
     }
+
+    document.getElementById('tuneArrowLeft').className = "";
+    document.getElementById('tuneArrowRight').className = "";
+
+
     var noteView = document.getElementById("noteView");
     noteView.innerHTML = notes[noteIndex];
 
@@ -147,14 +152,26 @@ angular.module('guitarTunerAppApp')
     {
       var tick = document.getElementById("tick_0");
       tick.className = "tick_0Highlighted";
+
+      document.getElementById('tuneArrowLeft').className = "tuneArrowLeft_ok";
+      document.getElementById('tuneArrowRight').className = "tuneArrowRight_ok";
     }
     else
     {
       var tick = document.getElementById("tick_0");
       tick.className = "tick_0_normal";
 
-      var tickToHighlight = document.getElementById('tick_' + Math.round((5*degrees)/30));
-      tickToHighlight.className = "tickHighlighted";
+      //Får inte vara för stort fel, skit i att highlighta då
+      if((Math.abs(5*degrees)/30) < 7.5){
+        var tickToHighlight = document.getElementById('tick_' + Math.round((5*degrees)/30));
+        tickToHighlight.className = "tickHighlighted";
+      }
+
+      //På vänstra sidan
+      if(degrees < 0)
+        document.getElementById('tuneArrowLeft').className = "tuneArrowLeft_wrong";
+      else
+        document.getElementById('tuneArrowRight').className = "tuneArrowRight_wrong";
     }
     
   }

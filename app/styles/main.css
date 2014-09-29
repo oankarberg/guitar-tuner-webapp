@@ -139,6 +139,7 @@ body, p, div{
   width:100%;
   background-color:#333;
   border-radius:10px;
+  min-width:430px;
 }
 #tunerViewContainer h2{
   margin: 0 0 10px 0;
@@ -150,20 +151,80 @@ body, p, div{
   margin: 0 auto; 
   position:relative;
   height:80px; 
-  width:300px;
-  text-align: center
+  text-align: center;
+  width:150px;
+}
+
+#tuneArrowLeft{
+    left:10px; 
+    top:40px;
+    width:30px; 
+    height:20px; 
+    position:relative;
+    margin: 0 auto; 
+    float:left;
+
+    border-left: 20px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    font-size: 0;
+
+}
+
+#tuneArrowRight{
+
+    left:60px; 
+    top:40px; 
+    width:30px; 
+    height:20px; 
+    position:relative; 
+    margin: 0 auto;
+
+    border-right: 20px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    font-size: 0;
+}
+
+.tuneArrowLeft_ok{
+
+    border-left: 20px solid #66cc33 !important;
+    border-top: 12px solid transparent !important;
+    border-bottom: 12px solid transparent !important;
+}
+
+.tuneArrowRight_ok{
+
+    border-right: 20px solid #66cc33 !important;
+    border-top: 12px solid transparent !important;
+    border-bottom: 12px solid transparent !important;
+
+}
+
+.tuneArrowLeft_wrong{
+
+    border-left: 20px solid rgba(255, 0, 0, 0.7) !important;
+    border-top: 12px solid transparent !important;
+    border-bottom: 12px solid transparent !important;
+
+}
+
+.tuneArrowRight_wrong{
+    border-right: 20px solid rgba(255, 0, 0, 0.7) !important;
+    border-top: 12px solid transparent !important;
+    border-bottom: 12px solid transparent !important;
 }
 
 #noteView {
+  float:left;
   font-family: Verdana;
-  width: 150px;
+  width: 120px;
   height: 80px;
   text-align: left;
   position: relative;
   font-size: 5.0em;
   color:#ccc !important;
-  left:129px;
-
+  left:23px;
 }
 
 #tunerView {
@@ -497,7 +558,7 @@ body, p, div{
 .sharp {
   font-family: 'Verdana';
   font-size: 0.3em;
-  margin-left:0px;
+  margin-top:20px;
 }
 
 /*SPECTRUM DIRECTIVE*/
