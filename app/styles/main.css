@@ -76,12 +76,14 @@ body {
   }
   /* Space out the masthead */
   .header {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
   }
+
+
 }
 
 
@@ -138,8 +140,7 @@ body, p, div{
   position: relative;
   width:100%;
   background-color:#333;
-  border-radius:10px;
-  min-width:430px;
+
 }
 #tunerViewContainer h2{
   margin: 0 0 10px 0;
