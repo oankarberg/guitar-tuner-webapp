@@ -51,10 +51,10 @@ angular.module('guitarTunerAppApp')
           //calculate staple style
           if(wrapElementWidth.clientWidth > $window.innerWidth)
           {
-            stapleWidth = $window.innerWidth/stpl;
+            stapleWidth = RoundToDecimal($window.innerWidth/stpl,2);
           }
           else
-            stapleWidth = wrapElementWidth.clientWidth/stpl;
+            stapleWidth = RoundToDecimal(wrapElementWidth.clientWidth/stpl,2);
 
           //set wrapper style staple, 
           scope.stapleWrapStyle =
@@ -90,6 +90,15 @@ angular.module('guitarTunerAppApp')
       
 
 
+    function RoundToDecimal(number,decimal) {
+      var zeros = new String( 1.0.toFixed(decimal) );
+      zeros = zeros.substr(2);
+      var mul_div = parseInt( "1"+zeros );
+      var increment = parseFloat( "."+zeros+"01" );
+      if( ( (number * (mul_div * 10)) % 10) >= 5 ) 
+        { number += increment; }
+      return Math.round((number * mul_div) - 0.5) / mul_div;
+      }
 
 
 

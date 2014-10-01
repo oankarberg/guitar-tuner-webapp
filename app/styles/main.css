@@ -237,8 +237,8 @@ body, p, div{
 
 .tipNormal {
   margin: 0 auto;
-  width: 4px;
   height: 0;
+  width:11px;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-top: 50px solid black;
@@ -248,8 +248,8 @@ body, p, div{
 
 .tip {
   margin: 0 auto;
-  width: 4px;
   height: 0;
+  width:11px;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-top: 50px solid red;
@@ -278,262 +278,162 @@ body, p, div{
   border-color: #66cc33 !important;
   box-shadow: 0 0 10px #66cc33;
 }
+#tick_0,#tick_1,#tick_-1,
+#tick_2,#tick_-2,
+#tick_3,#tick_-3,
+#tick_4,#tick_-4,
+#tick_5,#tick_-5,
+#tick_6,#tick_-6,
+#tick_7,#tick_-7{
+  display:inline-block;
+  margin: 0;
+  width:11px;
+  position:absolute;
+  border: 1px solid #ccc;
+  background-color:#ccc;
+  border-radius: 3px;
+}
 
 #tick_0 {
   top: 25px;
   left: 198px;
-  position: absolute;
-  width: 8px;
   height: 160px;
-
-  display: inline-block;
-  padding: 4px;
-  margin: 0;
-  border: 1px solid #ccc;
-  background-color:#ccc;
-  border-radius: 3px;
 }
 
 #tick_1 {
   background-color:#ccc;
   top: 30px;
   left: 198px;
-  position: absolute;
-  width: 4px;
   height: 115px;
   -webkit-transform: translate(30px, 20px);
   transform: translate(30px, 20px);
-
-  display: inline-block;
-  padding: 4px;
-  margin: 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+ 
 }
 
 #tick_-1 {
   background-color:#ccc;
   top: 30px;
   left: 198px;
-  position: absolute;
-  width: 4px;
   height: 115px;
   -webkit-transform: translate(-30px, 20px);
   transform: translate(-30px, 20px);
 
-  display: inline-block;
-  padding: 4px;
-  margin: 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  
 }
 
 #tick_2 {
   background-color:#ccc;
   top: 30px;
   left: 198px;
-  position: absolute;
-  width: 4px;
   height: 100px;
   -webkit-transform: translate(60px, 27.5px);
   transform: translate(60px, 27.5px);
-
-  display: inline-block;
-  padding: 4px;
-  margin: 0;
-  outline: 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
 }
 
 #tick_-2 {
   background-color:#ccc;
   top: 30px;
   left: 198px;
-  position: absolute;
-  width: 4px;
   height: 100px;
   -webkit-transform: translate(-60px, 27.5px);
   transform: translate(-60px, 27.5px);
 
-  display: inline-block;
-  padding: 4px;
-  margin: 0;
-  outline: 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+
 }
 
 #tick_3 {
   background-color:#ccc;
   top: 30px;
   left: 198px;
-  position: absolute;
-  width: 4px;
   height: 85px;
   -webkit-transform: translate(90px, 35px);
   transform: translate(90px, 35px);
 
-  display: inline-block;
-  padding: 4px;
-  margin: 0;
-  outline: 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+
 }
 
 #tick_-3 {
   background-color:#ccc;
   top: 30px;
   left: 198px;
-  position: absolute;
-  width: 4px;
   height: 85px;
   -webkit-transform: translate(-90px, 35px);
   transform: translate(-90px, 35px);
 
-  display: inline-block;
-  padding: 4px;
-  margin: 0;
-  outline: 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  
 }
 
 #tick_4 {
   background-color:#ccc;
   top: 30px;
   left: 198px;
-  position: absolute;
-  width: 4px;
   height: 70px;
   -webkit-transform: translate(120px, 42.5px);
   transform: translate(120px, 42.5px);
 
-  display: inline-block;
-  padding: 4px;
-  margin: 0;
-  outline: 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+
 }
 #tick_-4 {
   background-color:#ccc;
   top: 30px;
   left: 198px;
-  position: absolute;
-  width: 4px;
   height: 70px;
   -webkit-transform: translate(-120px, 42.5px);
   transform: translate(-120px, 42.5px);
-
-  display: inline-block;
-  padding: 4px;
-  margin: 0;
-  outline: 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+ 
 }
 #tick_5 {
   background-color:#ccc;
   top: 30px;
   left: 198px;
-  position: absolute;
-  width: 4px;
   height: 55px;
   -webkit-transform: translate(150px, 50px);
   transform: translate(150px, 50px);
 
-  display: inline-block;
-  padding: 4px;
-  margin: 0;
-  outline: 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
 }
 #tick_-5 {
   background-color:#ccc;
   top: 30px;
   left: 198px;
-  position: absolute;
-  width: 4px;
   height: 55px;
   -webkit-transform: translate(-150px, 50px);
   transform: translate(-150px, 50px);
-
-  display: inline-block;
-  padding: 4px;
-  margin: 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  
 }
 #tick_6 {
   background-color:#ccc;
   top: 30px;
   left: 198px;
-  position: absolute;
-  width: 4px;
   height: 40px;
   -webkit-transform: translate(180px, 57.5px);
   transform: translate(180px, 57.5px);
-
-  display: inline-block;
-  padding: 4px;
-  margin: 0;
-  outline: 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+ 
 }
 #tick_-6 {
   background-color:#ccc;
   top: 30px;
   left: 198px;
-  position: absolute;
-  width: 4px;
   height: 40px;
   -webkit-transform: translate(-180px, 57.5px);
   transform: translate(-180px, 57.5px);
-
-  display: inline-block;
-  padding: 4px;
-  margin: 0;
-  outline: 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  
 }
 #tick_7 {
   background-color:#ccc;
   top: 30px;
   left: 198px;
-  position: absolute;
-  width: 4px;
   height: 25px;
   -webkit-transform: translate(210px, 65px);
   transform: translate(210px, 65px);
 
-  display: inline-block;
-  padding: 4px;
-  margin: 0;
-  outline: 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
 }
 #tick_-7 {
   background-color:#ccc;
   top: 30px;
   left: 198px;
-  position: absolute;
-  width: 4px;
   height: 25px;
   -webkit-transform: translate(-210px, 65px);
   transform: translate(-210px, 65px);
-
-  display: inline-block;
-  padding: 4px;
-  margin: 0;
-  outline: 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
 }
 #needle2 {
   
@@ -548,7 +448,7 @@ body, p, div{
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   
-  padding: 4px;
+  /*padding: 4px;*/
   margin: 0;
   border: 1px solid black;
   z-index:1;
@@ -568,6 +468,7 @@ body, p, div{
   /*border: 2px solid black;*/
   height: 232px;
   /*width: 680px;*/
+  overflow: hidden;
   position: relative;
   margin: 0 auto;
   text-align: center;

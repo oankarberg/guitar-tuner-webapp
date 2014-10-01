@@ -142,7 +142,7 @@ angular.module('guitarTunerAppApp')
 
     var noteView = document.getElementById("noteView");
     noteView.innerHTML = notes[noteIndex];
-
+    console.log('noteERROR ' , noteError ) ;
     if (Math.abs(noteError) < 0.05)
     {
       var tick = document.getElementById("tick_0");
