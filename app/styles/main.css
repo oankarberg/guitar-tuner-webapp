@@ -566,9 +566,10 @@ body, p, div{
 
 #spectrumWrapper{
   /*border: 2px solid black;*/
-  height: 200px;
-  width: 680px;
+  height: 232px;
+  /*width: 680px;*/
   position: relative;
+  margin: 0 auto;
   text-align: center;
 
 }
@@ -577,17 +578,18 @@ body, p, div{
   display: inline-block;
   padding: 0px;
   margin: 0px;
-  width:  16px;
+  /*width:  16px;*/
   height: 200px;
 }
 
 
 
 #stapleInDir{
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  width: 12px;
-  border: 1px solid black;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  width: 12px; /*sets dynamically in directive */
+  border-bottom: 1px solid black;
+  /*border: 1px solid black;*/
   bottom: 0;
   position: absolute;
   background: -webkit-linear-gradient(#86ff49, green); /* For Safari 5.1 to 6.0 */
@@ -598,8 +600,7 @@ body, p, div{
 
 #spectrumLine{
   position: relative;
-  display: block;
-
+  /*border-top: 1px solid #ccc;*/
 }
 
 #spectrumLow,
@@ -607,6 +608,13 @@ body, p, div{
 #spectrumHigh{
   display: inline-block;
   position: absolute;
+}
+#spectrumLow a,
+#spectrumMiddle a,
+#spectrumHigh a{
+  font-size: 10px;
+  color: white;
+  text-decoration: none;
 }
 #spectrumLow{
   top:0;

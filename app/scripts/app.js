@@ -31,3 +31,8 @@ angular
         redirectTo: '/'
       });
   });
+//   .run(function($rootScope, $window){
+//             angular.element($window).bind('resize',function(){
+//                 $rootScope.$emit('windowResize');
+//   });
+// });

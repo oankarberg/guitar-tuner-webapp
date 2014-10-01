@@ -187,7 +187,6 @@ angular.module('guitarTunerAppApp')
       var vec1 = inputVector;
       var vec2 = [], vec3 = [], vec4 = [], vec5 = [];
   
-      //console.log(vec1);
 
       for(var i = 0; i < numFreq; i++)
       {
@@ -230,15 +229,7 @@ angular.module('guitarTunerAppApp')
       {
           // console.log('inputVector ' , inputVector[i]);
           var amplitude = inputVector[i];
-          sum += inputVector[i];
-          if(i%25 === 0 && i < 1000) 
-          {
-            // Används i direktiv
-            $scope.vecAverageAmp.push((sum/25));
-            whichStaple++;
-            sum = 0;
-
-          }
+    
           
           if(amplitude>peakMax)
           {
@@ -247,17 +238,6 @@ angular.module('guitarTunerAppApp')
           }
 
       }
-      // for(var i = 1; i <=40; i++)
-      // {
-      //   $scope.sp[i] = document.getElementById("sp_" + i + "");
-      // }
-
-      // console.log('$scope.vecAverageAmp ' , $scope.vecAverageAmp);
-      // for(var i = 0; i < $scope.vecAverageAmp.length; i++){
-      //   $scope.sp[i+1].style.height = '' + 50*$scope.vecAverageAmp[i] +'px';
-      // }
-
-
 
       return {"peakInd":peakMaxInd,"peakAmp":peakMax};
   }
@@ -352,8 +332,9 @@ angular.module('guitarTunerAppApp')
           applyHamming(audioWindow,audioWindowProcessed); // lägg hamming
           fft.forward(audioWindowProcessed);  //gör fast fourier transform
 
-          var spectrum = fft.spectrum;    //ta frekvensspektrumet 
-          var peakInfo = getMaxPeak(spectrum);  //hämta frekvens där vi har högst amplitud
+          $scope.spectrum = fft.spectrum;    //ta frekvensspektrumet 
+          // console.log('spectrumlol');
+          var peakInfo = getMaxPeak($scope.spectrum);  //hämta frekvens där vi har högst amplitud
           if (peakInfo["peakAmp"] > 0.5)    //använd bara peakar över 0.5 för bättre nogrannhet
           {
               var frequency = peakInfo["peakInd"]*sampleRate/audioWindowSize;   //omvandla till frekvens
