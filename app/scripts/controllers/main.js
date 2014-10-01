@@ -10,8 +10,6 @@
 angular.module('guitarTunerAppApp')
   .controller('MainCtrl', function ($scope, $timeout, $window) {
    
-
-
     // $scope.sp = [];
     // $scope.sp[39] = 0;
     // console.log("length " , $scope.sp.length );
@@ -50,8 +48,6 @@ angular.module('guitarTunerAppApp')
     div.className = "play";
     stopAudio();
     $scope.playing = false;
-    // var message = $("#message");
-    // message.text("Paused: Click Play to continue");
     $scope.timer = "Pausad"
     clearInterval(timerInterval);
   }
@@ -144,7 +140,6 @@ angular.module('guitarTunerAppApp')
     document.getElementById('tuneArrowLeft').className = "";
     document.getElementById('tuneArrowRight').className = "";
 
-
     var noteView = document.getElementById("noteView");
     noteView.innerHTML = notes[noteIndex];
 
@@ -175,7 +170,7 @@ angular.module('guitarTunerAppApp')
     }
     
   }
-    //Copyright Tom Hoddes 2014 http://freetuner.co 
+
   var audioContext = new AudioContext();
   var inputStreamNode = null,
       gainNode = null;
@@ -213,9 +208,9 @@ angular.module('guitarTunerAppApp')
       vec4.concat(zeroArray);
       vec5.concat(zeroArray);
 
-      var SumVec = [];
+      var sumVec = [];
       for(var i = 0; i < numFreq; i++)
-          SumVec[i] = vec1[i] + vec2[i] +  vec3[i] + vec4[i] + vec5[i];
+          sumVec[i] = vec1[i] + vec2[i] +  vec3[i] + vec4[i] + vec5[i];
       
 
       var peakMax = 0;
@@ -228,9 +223,9 @@ angular.module('guitarTunerAppApp')
       for(var i=7;i<numFreq;i++)
       {
           // console.log('inputVector ' , inputVector[i]);
-          var amplitude = inputVector[i];
+          // var amplitude = inputVector[i];
+          var amplitude = sumVec[i];
     
-          
           if(amplitude>peakMax)
           {
               peakMax=amplitude;
