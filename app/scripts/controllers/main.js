@@ -142,19 +142,28 @@ angular.module('guitarTunerAppApp')
 
     var noteView = document.getElementById("noteView");
     noteView.innerHTML = notes[noteIndex];
-    console.log('noteERROR ' , noteError ) ;
+    
+    //Stämd!!
     if (Math.abs(noteError) < 0.05)
     {
       var tick = document.getElementById("tick_0");
       tick.className = "tick_0Highlighted";
 
+      //Sätt bokstaven till grön
+      document.getElementById("noteView").className = "noteCleanHighlighted";
+
       document.getElementById('tuneArrowLeft').className = "tuneArrowLeft_ok";
       document.getElementById('tuneArrowRight').className = "tuneArrowRight_ok";
     }
+
+    //Inte stämd, beräkna fel!
     else
     {
       var tick = document.getElementById("tick_0");
       tick.className = "tick_0_normal";
+
+      //Sätt bokstaven till röd
+      document.getElementById("noteView").className = "noteWrongHighlighted";
 
       //Får inte vara för stort fel, skit i att highlighta då
       if((Math.abs(5*degrees)/30) < 7.5){

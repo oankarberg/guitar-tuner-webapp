@@ -32,9 +32,9 @@ body {
 
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
+  padding-top: 5px; /* 19px */
   color: #777;
-  border-top: 1px solid #e5e5e5;
+  /*border-top: 1px solid #e5e5e5;*/
 }
 
 /* Customize container */
@@ -151,7 +151,7 @@ body, p, div{
 #noteViewContainer{
   margin: 0 auto; 
   position:relative;
-  height:80px; 
+  height:75px; 
   text-align: center;
   width:150px;
 }
@@ -169,7 +169,6 @@ body, p, div{
     border-top: 12px solid transparent;
     border-bottom: 12px solid transparent;
     font-size: 0;
-
 }
 
 #tuneArrowRight{
@@ -204,14 +203,14 @@ body, p, div{
 
 .tuneArrowLeft_wrong{
 
-    border-left: 20px solid rgba(255, 0, 0, 0.7) !important;
+    border-left: 20px solid rgba(255, 0, 0, 0.8) !important;
     border-top: 12px solid transparent !important;
     border-bottom: 12px solid transparent !important;
 
 }
 
 .tuneArrowRight_wrong{
-    border-right: 20px solid rgba(255, 0, 0, 0.7) !important;
+    border-right: 20px solid rgba(255, 0, 0, 0.8) !important;
     border-top: 12px solid transparent !important;
     border-bottom: 12px solid transparent !important;
 }
@@ -219,13 +218,12 @@ body, p, div{
 #noteView {
   float:left;
   font-family: Verdana;
-  width: 120px;
-  height: 80px;
   text-align: left;
   position: relative;
-  font-size: 5.0em;
-  color:#ccc !important;
-  left:23px;
+  font-size: 4em;
+  color:#ccc;
+  left:30px;
+  top:10px;
 }
 
 #tunerView {
@@ -260,6 +258,25 @@ body, p, div{
   border-color: #ccc !important;
 }
 
+.noteWrongHighlighted {
+
+  /*color:rgba(255, 0, 0, 0.7) !important;*/
+
+  color:red !important;
+  opacity:0.8;
+  border-color: red !important;
+  text-shadow: 0 0 7px red;
+
+}
+.noteCleanHighlighted {color:#66cc33 !important;
+
+  color:#66cc33 !important;
+  opacity:0.8;
+  border-color: #66cc33 !important;
+  text-shadow: 0 0 7px #66cc33;
+
+}
+
 .tickHighlighted{
   background-color:red !important;
   opacity:0.8;
@@ -278,6 +295,7 @@ body, p, div{
   border-color: #66cc33 !important;
   box-shadow: 0 0 10px #66cc33;
 }
+
 #tick_0,#tick_1,#tick_-1,
 #tick_2,#tick_-2,
 #tick_3,#tick_-3,
@@ -483,8 +501,6 @@ body, p, div{
   height: 200px;
 }
 
-
-
 #stapleInDir{
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -493,15 +509,15 @@ body, p, div{
   /*border: 1px solid black;*/
   bottom: 0;
   position: absolute;
-  background: -webkit-linear-gradient(#86ff49, green); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
+  background: -webkit-linear-gradient(#86ff49, #095f00); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#86ff49, #095f00); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#86ff49, #095f00); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#86ff49, #095f00); /* Standard syntax */
 }
 
 #spectrumLine{
   position: relative;
-  /*border-top: 1px solid #ccc;*/
+  border-top: 1px solid #ccc;
 }
 
 #spectrumLow,
