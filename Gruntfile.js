@@ -36,7 +36,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com:oankarberg/guitar-tuner-webapp.git',
+          remote: 'https://github.com/oankarberg/Guitar-Tuner-Webapp.git',
           branch: 'gh-pages'
         }
       },
