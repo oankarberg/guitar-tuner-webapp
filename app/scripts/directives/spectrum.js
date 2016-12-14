@@ -4,7 +4,7 @@
  * @ngdoc directive
  * @name guitarTunerAppApp.directive:spectrum
  * @description
- * # spectrum
+ * # spectrumf
  */
 angular.module('guitarTunerAppApp')
   .directive('spectrum', function ($window) {
@@ -66,7 +66,6 @@ angular.module('guitarTunerAppApp')
             var heightInPx = 35*scope.stapleAverageAmp[i];
             if(heightInPx > 200)
               heightInPx = 200;
-            console.log('height ', heightInPx);
             //staple style
             scope.stapleStyle[i] = 
               {

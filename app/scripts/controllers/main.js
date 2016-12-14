@@ -10,9 +10,7 @@
 angular.module('guitarTunerAppApp')
   .controller('MainCtrl', function ($scope, $timeout, $window) {
    
-    // $scope.sp = [];
-    // $scope.sp[39] = 0;
-    // console.log("length " , $scope.sp.length );
+
   $scope.noteFreq = 0;
   $scope.$watch('noteFreq', function(){  });
   var numTicks = 10;
@@ -124,14 +122,8 @@ angular.module('guitarTunerAppApp')
     needle.style["-moz-transform"] = "translate(-" + 5*degrees + "px, 0px)";
 
 
-
-//    console.log('error', 5*degrees);
-  //  console.log('mod 30', Math.round((5*degrees)/30));
-
     for(var i = 0; i < 8; i++){
 
-        //console.log('tick_-' + i);
-       // console.log(document.getElementById('tick_' + i))
         document.getElementById('tick_' + i).className = "";
         document.getElementById("tick_"+(-1)*i).className = "";
 
@@ -275,20 +267,16 @@ angular.module('guitarTunerAppApp')
   {
       var note = (Math.round(57+log2( frequency/440.0 )*12 ))%12;
       var note2 = Math.round(57+log2( frequency/440.0 )*12 );
-      console.log('note utan mODULus' , note2);
       // console.log(note);
       var noteFull = Math.round(log2( frequency/440.0 )*12); //runda ner till semiton
       var noteFreq = Math.pow(2,noteFull/12.0)*440.0; //ta fram notfreq från rundad semiton - nära grundfreq
      
       var errorMin = frequency - noteFreq;
-      console.log('Error MIN ', errorMin) ;
+      
       var noteOther = (errorMin > 0) ? noteFull+1 : noteFull-1;
-      console.log('noteOther  ', noteOther) ;
-      console.log('noteFull ' , noteFull);
-      console.log('noteFullFreq ' , noteFreq);
-      console.log('noteOrdinaryFreq ' , frequency);
+     
       var freqOther = Math.pow(2,noteOther/12.0)*440.0;
-      console.log('freqOther  ' , freqOther);
+      
       var cent = errorMin / Math.abs(noteFreq - freqOther);
       // console.log('note' ,note , 'cent ' ,cent , 'frekvens ', frequency);
       
