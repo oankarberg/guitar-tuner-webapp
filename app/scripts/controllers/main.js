@@ -23,7 +23,7 @@ angular.module('guitarTunerAppApp')
   $scope.timer = "Pausad"
 
 
-  window.addEventListener('load', function(){
+  $scope.initializeTuner = function(){
     var $tunerViewContainer = $("#tunerView");
     var $div = $("<div>", {id: "tick_0"});
     $div.attr('style',  'height:' + (correctTickHeight) + 'px; ' );
@@ -40,7 +40,7 @@ angular.module('guitarTunerAppApp')
                           'height:' + (initTickHeight -  correctOffset - tickDeltaY*i) + 'px;');
       $tunerViewContainer.append($div);
     };
-  }); 
+  }
 
   var timerInterval;
 
@@ -368,6 +368,7 @@ angular.module('guitarTunerAppApp')
   }
 
   $scope.$on('$viewContentLoaded', function(){
+      $scope.initializeTuner();
       $scope.initAudio();
   }) ;
 
