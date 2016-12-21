@@ -278,9 +278,10 @@ body, p, div{
 }
 
 .tickHighlighted{
-  background-color:red !important;
-  opacity:0.8;
+  background:red !important;
+  opacity:1.0;
   border-color: red !important;
+  z-index: 100;
   box-shadow: 0 0 10px red;
 
   -webkit-transition: all 0.5s ease-in-out;
@@ -310,149 +311,10 @@ body, p, div{
   border: 1px solid #ccc;
   background-color:#ccc;
   border-radius: 3px;
-}
-
-#tick_0 {
-  top: 25px;
-  left: 198px;
-  height: 160px;
-}
-
-#tick_1 {
-  background-color:#ccc;
   top: 30px;
   left: 198px;
-  height: 115px;
-  -webkit-transform: translate(30px, 20px);
-  transform: translate(30px, 20px);
- 
 }
 
-#tick_-1 {
-  background-color:#ccc;
-  top: 30px;
-  left: 198px;
-  height: 115px;
-  -webkit-transform: translate(-30px, 20px);
-  transform: translate(-30px, 20px);
-
-  
-}
-
-#tick_2 {
-  background-color:#ccc;
-  top: 30px;
-  left: 198px;
-  height: 100px;
-  -webkit-transform: translate(60px, 27.5px);
-  transform: translate(60px, 27.5px);
-}
-
-#tick_-2 {
-  background-color:#ccc;
-  top: 30px;
-  left: 198px;
-  height: 100px;
-  -webkit-transform: translate(-60px, 27.5px);
-  transform: translate(-60px, 27.5px);
-
-
-}
-
-#tick_3 {
-  background-color:#ccc;
-  top: 30px;
-  left: 198px;
-  height: 85px;
-  -webkit-transform: translate(90px, 35px);
-  transform: translate(90px, 35px);
-
-
-}
-
-#tick_-3 {
-  background-color:#ccc;
-  top: 30px;
-  left: 198px;
-  height: 85px;
-  -webkit-transform: translate(-90px, 35px);
-  transform: translate(-90px, 35px);
-
-  
-}
-
-#tick_4 {
-  background-color:#ccc;
-  top: 30px;
-  left: 198px;
-  height: 70px;
-  -webkit-transform: translate(120px, 42.5px);
-  transform: translate(120px, 42.5px);
-
-
-}
-#tick_-4 {
-  background-color:#ccc;
-  top: 30px;
-  left: 198px;
-  height: 70px;
-  -webkit-transform: translate(-120px, 42.5px);
-  transform: translate(-120px, 42.5px);
- 
-}
-#tick_5 {
-  background-color:#ccc;
-  top: 30px;
-  left: 198px;
-  height: 55px;
-  -webkit-transform: translate(150px, 50px);
-  transform: translate(150px, 50px);
-
-}
-#tick_-5 {
-  background-color:#ccc;
-  top: 30px;
-  left: 198px;
-  height: 55px;
-  -webkit-transform: translate(-150px, 50px);
-  transform: translate(-150px, 50px);
-  
-}
-#tick_6 {
-  background-color:#ccc;
-  top: 30px;
-  left: 198px;
-  height: 40px;
-  -webkit-transform: translate(180px, 57.5px);
-  transform: translate(180px, 57.5px);
- 
-}
-#tick_-6 {
-  background-color:#ccc;
-  top: 30px;
-  left: 198px;
-  height: 40px;
-  -webkit-transform: translate(-180px, 57.5px);
-  transform: translate(-180px, 57.5px);
-  
-}
-#tick_7 {
-  background-color:#ccc;
-  top: 30px;
-  left: 198px;
-  height: 25px;
-  -webkit-transform: translate(210px, 65px);
-  transform: translate(210px, 65px);
-
-}
-#tick_-7 {
-  background-color:#ccc;
-  top: 30px;
-  left: 198px;
-  height: 25px;
-  -webkit-transform: translate(-210px, 65px);
-  transform: translate(-210px, 65px);
-}
 #needle2 {
   
   display:none;

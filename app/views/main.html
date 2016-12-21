@@ -10,10 +10,6 @@
   </div>
 
   <div id="tunerView">
-    <!--<div id="tip" class="tipNormal"></div>-->
-    <div id="needle2"></div>
-    <div id = "tick_0" ></div>
-    <div id="tick_1"></div><div id="tick_-1"></div><div id="tick_2"></div><div id="tick_-2"></div><div id="tick_3"></div><div id="tick_-3"></div><div id="tick_4"></div><div id="tick_-4"></div><div id="tick_5"></div><div id="tick_-5"></div><div id="tick_6"></div><div id="tick_-6"></div><div id="tick_7"></div><div id="tick_-7"></div>
   </div>
   <h2> {{noteFreq}} Hz </h2>
 </div>
@@ -25,13 +21,3 @@
 
 <spectrum ng-if="spectrum" spectrum-data="spectrum" min-freq="0" max-freq="2000"></spectrum>
 
-<!-- Utan directive -->
-<!-- <div id="spectrumWrapper"> 
-
-    <div id="stapleWrapper" ng-repeat="staple in sp track by $index">
-        <div id="sp_{{$index}}">
-        </div>
-    </div>
-
-</div>
- -->

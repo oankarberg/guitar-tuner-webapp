@@ -13,17 +13,31 @@ angular.module('guitarTunerAppApp')
 
   $scope.noteFreq = 0;
   $scope.$watch('noteFreq', function(){  });
-  var numTicks = 10;
-  var dialDegrees = 45;
+  var numTicks = 7;
+  var tickSeparation = 30;
+  var initTickHeight = 150;
+  var correctTickHeight = 160;
+  var correctOffset = correctTickHeight - initTickHeight;
+  var tickDeltaY = 17;
+
   $scope.timer = "Pausad"
 
 
   window.addEventListener('load', function(){
     var $tunerViewContainer = $("#tunerView");
+    var $div = $("<div>", {id: "tick_0"});
+    $div.attr('style',  'height:' + (correctTickHeight) + 'px; ' );
+    $tunerViewContainer.append($div);
     for (var i = 1; i <= numTicks; i++) {
       var $div = $("<div>", {id: "tick_"+i});
+      $div.attr('style','-webkit-transform: translate(' + (tickSeparation * i )+ 'px,' + (correctOffset + i*tickDeltaY/2)+  'px);  ' +
+                          'transform: translate(' + (tickSeparation * i) + 'px,' + (correctOffset + i*tickDeltaY/2) +  'px); '  + 
+                          'height:' + (initTickHeight - correctOffset - tickDeltaY*i) + 'px; ' );
       $tunerViewContainer.append($div);
       var $div = $("<div>", {id: "tick_"+(-1)*i});
+       $div.attr('style','-webkit-transform: translate(' + (tickSeparation * i *(-1)) + 'px,' + (correctOffset + i*tickDeltaY/2) +  'px);  ' +
+                          'transform: translate(' + (tickSeparation * i * (-1))+ 'px,' + (correctOffset + i*tickDeltaY/2) +  'px); ' + 
+                          'height:' + (initTickHeight -  correctOffset - tickDeltaY*i) + 'px;');
       $tunerViewContainer.append($div);
     };
   }); 
@@ -111,17 +125,9 @@ angular.module('guitarTunerAppApp')
     var notes = ['C','C'+sharpHtml,'D','D'+sharpHtml,'E','F','F'+sharpHtml,'G','G'+sharpHtml,'A','A'+sharpHtml,'B'];
     
     $scope.noteFreq = Math.round(noteFrequency);
-    var needle = document.getElementById("needle2");
-
-    var degrees = noteError*2.0*dialDegrees;
-  //  needle.style.webkitTransform = 'rotate('+degrees+'deg)';
-    //needle.style.MozTransform = 'rotate('+degrees+'deg)';
-
-    //Gånger faktor 5 istället..
-    needle.style["-webkit-transform"] = "translate(" + 5*degrees + "px, 0px)";
-    needle.style["-moz-transform"] = "translate(-" + 5*degrees + "px, 0px)";
-
-
+    //scale between -1 and 1
+    var noteErrorScaled = noteError * 2.0;
+    //Reset highlighted tick
     for(var i = 0; i < 8; i++){
 
         document.getElementById('tick_' + i).className = "";
@@ -135,36 +141,28 @@ angular.module('guitarTunerAppApp')
     var noteView = document.getElementById("noteView");
     noteView.innerHTML = notes[noteIndex];
     
-    //Stämd!!
-    if (Math.abs(noteError) < 0.05)
-    {
+    //TUNED!
+    if (Math.abs(noteErrorScaled) < (1.0 / numTicks )){
       var tick = document.getElementById("tick_0");
       tick.className = "tick_0Highlighted";
-
       //Sätt bokstaven till grön
       document.getElementById("noteView").className = "noteCleanHighlighted";
 
       document.getElementById('tuneArrowLeft').className = "tuneArrowLeft_ok";
       document.getElementById('tuneArrowRight').className = "tuneArrowRight_ok";
     }
-
-    //Inte stämd, beräkna fel!
-    else
-    {
+    else{
       var tick = document.getElementById("tick_0");
       tick.className = "tick_0_normal";
 
-      //Sätt bokstaven till röd
       document.getElementById("noteView").className = "noteWrongHighlighted";
 
-      //Får inte vara för stort fel, skit i att highlighta då
-      if((Math.abs(5*degrees)/30) < 7.5){
-        var tickToHighlight = document.getElementById('tick_' + Math.round((5*degrees)/30));
-        tickToHighlight.className = "tickHighlighted";
-      }
+      //Set highlighted tick 
+      var tickToHighlight = document.getElementById('tick_' + Math.round(noteErrorScaled * numTicks));
+      tickToHighlight.className = "tickHighlighted";
 
       //På vänstra sidan
-      if(degrees < 0)
+      if(noteError < 0)
         document.getElementById('tuneArrowLeft').className = "tuneArrowLeft_wrong";
       else
         document.getElementById('tuneArrowRight').className = "tuneArrowRight_wrong";
@@ -301,10 +299,9 @@ angular.module('guitarTunerAppApp')
       inputStreamNode.connect(gainNode); //Kopplar ihop med ljudkontrollen
 
       scriptProcessorNode = audioContext.createScriptProcessor(bufferSize, 1, 1); //För ljudanalys, en inkanal och en utkanal
-      console.log('script ', scriptProcessorNode);
+      
 
       sampleRate = audioContext.sampleRate; //Hämta sample per sekund från audio input, används för alla objekt/noder 
-      console.log('sampleRate ', sampleRate, audioWindowSize);
       fft = new FFT(audioWindowSize, sampleRate); //Skapar fouriertransform. Hitta en balans mellan windowsize och samplerate (65536 standard?)
 
       gainNode.connect (scriptProcessorNode); //koppla ihop volym och ljudobjekt 

@@ -9,7 +9,7 @@
 angular.module('guitarTunerAppApp')
   .directive('spectrum', function ($window) {
     return {
-      templateUrl: 'scripts/directives/spectrum.html',
+      templateUrl: 'views/spectrum.html',
       restrict: 'EA',
       scope: {
         spectrumData:'=spectrumData'
