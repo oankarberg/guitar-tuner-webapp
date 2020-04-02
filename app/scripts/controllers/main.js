@@ -63,9 +63,14 @@ angular.module('guitarTunerAppApp')
     $scope.timer = "Pausad"
     clearInterval(timerInterval);
   }
+  $scope.initAudioOk = function ()
+  {
+    $scope.initAudio()
+  }
+
+
   $scope.playPause = function ()
   {
-    
     if($scope.playing == true)
     {
       pause();
@@ -360,12 +365,15 @@ angular.module('guitarTunerAppApp')
           browserNotSupported();
       }
 
-      // which media input is used , 
-      navigator.getUserMedia({audio:true}, gotStream, function(e) {
+      audioContext.resume().then(function() {
+        // which media input is used , 
+        navigator.getUserMedia({audio:true}, gotStream, function(e) {
               // alert('Error getting audio');
               console.log(e);
           });
+      })
   }
+
 
   $scope.$on('$viewContentLoaded', function(){
       $scope.initializeTuner();

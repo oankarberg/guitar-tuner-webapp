@@ -137,6 +137,7 @@ body, p, div{
   display:none;
 }
 #tunerViewContainer {
+  text-align: center;
   position: relative;
   width:100%;
   background-color:#333;
